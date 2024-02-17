@@ -67,5 +67,5 @@ composer require encore
 npm install --save @babel/plugin-proposal-class-properties
 yarn install
 yarn watch
-yarn add bootstrap
+yarn add bootstrap$$]
 ```
