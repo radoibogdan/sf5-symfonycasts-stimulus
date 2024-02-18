@@ -6,10 +6,12 @@
             {{ form_widget(addToCartForm.color) }}
 
             {% for color in addToCartForm.vars.data.product.colors %}
+                {# with span tags you need to specify the click event for actions data-action="click->color-square#selectColor"#}
                 <button
                     class="color-square"
                     type="button"
                     data-action="color-square#selectColor"
+                    data-color-square-target="colorSquare"
                     style="background-color: rgb({{ color.red }}, {{ color.green }}, {{ color.blue }})"
                 ></button>
             {% endfor %}
