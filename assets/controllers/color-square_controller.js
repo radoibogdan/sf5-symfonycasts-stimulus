@@ -3,10 +3,15 @@ import {Controller} from "@hotwired/stimulus";
 export default class extends Controller {
     selectedColorId = null
     static targets = ['colorSquare', 'select'];
+    /* VALUES API */
+    static values = {
+        colorId: Number
+    }
 
     connect() {
         /* Hides the <select> tag */
         this.selectTarget.classList.add('d-none');
+        console.log(this.colorIdValue);
     }
 
     selectColor(event) {
