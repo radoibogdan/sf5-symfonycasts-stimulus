@@ -78,5 +78,13 @@ In our case, detect click outside (useClickOutside) of search preview so as to c
 yarn add stimulus-use@0.41.0 stimulus@2.0.0
 ```
 
+**7) Install Sweetalert 2 - Modal**  
+[Sweetalert 2 docs][3]
+```
+yarn add sweetalert2
+```
+
+
 [1]:https://github.com/stimulus-use/stimulus-use
 [2]:https://stimulus-use.github.io/stimulus-use/#/
+[3]:https://sweetalert2.github.io/
