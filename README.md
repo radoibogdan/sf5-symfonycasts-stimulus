@@ -69,3 +69,14 @@ yarn install
 yarn watch
 yarn add bootstrap$$]
 ```
+**6) Install Stimulus use**  
+[Stimulus 2 docs][1]  
+[Stimulus Website examples][2]  
+React to javascript event.
+In our case, detect click outside (useClickOutside) of search preview so as to close the search preview
+```
+yarn add stimulus-use@0.41.0 stimulus@2.0.0
+```
+
+[1]:https://github.com/stimulus-use/stimulus-use
+[2]:https://stimulus-use.github.io/stimulus-use/#/
