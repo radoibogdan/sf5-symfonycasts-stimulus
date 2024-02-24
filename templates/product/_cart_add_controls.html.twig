@@ -6,7 +6,7 @@
             {# VALUES API #}
             {{ stimulus_controller('color-square', {
                 colorId: addToCartForm.vars.data.product.colors[1].id
-            }) }}
+            }) }} {# creates colorIdValue #}
         >
             {{ form_widget(addToCartForm.color, {
                 attr : {'data-color-square-target' : 'select'}
