@@ -6,7 +6,8 @@ export default class extends Controller {
         title: String,
         text: String,
         icon: String,
-        confirmButtonText: String
+        confirmButtonText: String,
+        useAsync: Boolean,
     }
     onSubmit(event) {
         event.preventDefault();
@@ -19,10 +20,27 @@ export default class extends Controller {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: this.confirmButtonTextValue || 'Yes',
-        }).then((result) => {
-            if (result.isConfirmed) {
-                this.element.submit()
+            showLoaderOnConfirm: true,
+            // preConfirm is called after the user confirms the modal
+            preConfirm: () => {
+                return this.submitForm();
             }
         });
    }
+
+    submitForm() {
+        /* Use classic submit (don't use async) */
+        if (!this.useAsyncValue) {
+            this.element.submit();
+
+            return;
+        }
+
+        /* Submit form asynchronously using ajax */
+        return fetch(this.element.action, {
+            method: this.element.method,
+            // submit an entire form with all its fields as key/value pairs
+            body: new URLSearchParams(new FormData(this.element))
+        });
+    }
 }
