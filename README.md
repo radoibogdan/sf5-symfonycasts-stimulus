@@ -84,7 +84,20 @@ yarn add stimulus-use@0.41.0 stimulus@2.0.0
 yarn add sweetalert2
 ```
 
+**7) Install UX-Charts(javascript + symfony library)**  
+[UX chartsjs - GitHub][4]  
+[UX chartsjs - Symfony][5]
+```
+composer require symfony/ux-chartjs:1.2.0
+yarn install --force
+```
+Use Ux charts here
+https://127.0.0.1:8000/admin
 
+
+----------------------------------------------------------------------
 [1]:https://github.com/stimulus-use/stimulus-use
 [2]:https://stimulus-use.github.io/stimulus-use/#/
 [3]:https://sweetalert2.github.io/
+[4]:https://github.com/symfony/ux-chartjs
+[5]:https://symfony.com/bundles/ux-chartjs/current/index.html
