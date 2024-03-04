@@ -94,6 +94,11 @@ yarn install --force
 Use Ux charts here
 https://127.0.0.1:8000/admin
 
+**8) Install React**
+```
+yarn add @babel/preset-react@^7.0.0 --dev
+yarn add react react-dom --dev
+```
 
 ----------------------------------------------------------------------
 [1]:https://github.com/stimulus-use/stimulus-use
