@@ -30,10 +30,11 @@ class AdminController extends AbstractController
 
         $chart->setOptions([
             'scales' => [
-                'y' => [
-                    'suggestedMin' => 0,
-                    'suggestedMax' => 100,
-                ],
+                'yAxes' => [[
+                    'ticks' => [
+                        'beginAtZero' => true
+                    ]
+                ]],
             ],
         ]);
 
