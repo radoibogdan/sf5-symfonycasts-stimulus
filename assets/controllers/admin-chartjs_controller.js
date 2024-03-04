@@ -1,6 +1,9 @@
 import {Controller} from "@hotwired/stimulus";
 
 export default class extends Controller {
+    /* Listening to the event dispatched here which contains the chart
+     * vendor/symfony/ux-chartjs/Resources/assets/src/controller.js
+    **/
     onChartConnect(event) {
         this.chart = event.detail.chart;
         setTimeout(() => {
