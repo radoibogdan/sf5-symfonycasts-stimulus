@@ -6,6 +6,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
+/*Used in register.html.twig */
 class SerializeExtension extends AbstractExtension
 {
     private $serializer;
