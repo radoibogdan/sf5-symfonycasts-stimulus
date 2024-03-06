@@ -100,6 +100,18 @@ yarn add @babel/preset-react@^7.0.0 --dev
 yarn add react react-dom --dev
 ```
 
+**9) Analyze js files with Webpack Bundle Analyzer**  
+Generate stats file IN TERMINAL (not POWERSHELL)
+```
+yarn run --silent build --json > stats.json
+```
+Install library to read stats file and use library
+```
+yarn add webpack-bundle-analyzer --dev
+yarn webpack-bundle-analyzer stats.json public/build
+```
+Go to http://127.0.0.1:8888/
+
 ----------------------------------------------------------------------
 [1]:https://github.com/stimulus-use/stimulus-use
 [2]:https://stimulus-use.github.io/stimulus-use/#/
