@@ -103,7 +103,8 @@ yarn add react react-dom --dev
 **9) Analyze js files with Webpack Bundle Analyzer**  
 Generate stats file IN TERMINAL (not POWERSHELL)
 ```
-yarn run --silent build --json > stats.json
+production: yarn run --silent build --json > stats.json
+developement: yarn run --silent dev --json > lazy-test.json
 ```
 Install library to read stats file and use library
 ```
