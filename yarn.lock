@@ -1103,10 +1103,10 @@
   resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-2.0.0.tgz#54296d2a2dffd4f962d2e802d99a3fdd84b8845f"
   integrity sha512-D6tJWsAC024MwGEIKlUVYU8Ln87mlrmiwHvYAjipg+s8H4eLxUMQ3PZkWyPevfipH+oR3leuHsjYsK1gN5ViQA==
 
-"@symfony/stimulus-bridge@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@symfony/stimulus-bridge/-/stimulus-bridge-2.0.0.tgz#52cbf5c8524dec1a6c154a535bc82fedf1987b06"
-  integrity sha512-sq8FMQDmG5rtcmXwK+SQ2o5dEEqjaxpFjP/EYzl3qbGnED099XxOQDPnbrtVSIRRPlWEsuoTalD9B1fAdeFp0Q==
+"@symfony/stimulus-bridge@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@symfony/stimulus-bridge/-/stimulus-bridge-2.0.1.tgz#0e87cd53bf4bca5c4d6b058ff1b7ddb7b67f93c3"
+  integrity sha512-zidHaNsqSYOAWP0y7iB3eOv5t/jL2BRVjIOrr8ZvYYUbgO9lnztnFlC8cfIzcA/ITELvjg1aBA2qhgPW7INXug==
   dependencies:
     acorn "^8.0.5"
 

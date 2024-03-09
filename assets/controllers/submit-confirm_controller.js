@@ -1,8 +1,10 @@
 import {Controller} from "@hotwired/stimulus";
 import Swal from "sweetalert2";
 import {useDispatch} from "stimulus-use";
-
+/*Sweet alert used here to confirm cart removal item via a modal that asks to confirm action */
+/* stimulusFetch: 'lazy' */
 export default class extends Controller {
+    // stimulus Fetch => Special stimulus bridge syntaxe that makes controller lazy
     static values = {
         title: String,
         text: String,
