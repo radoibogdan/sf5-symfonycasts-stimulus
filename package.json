@@ -5,7 +5,7 @@
         "@symfony/stimulus-bridge": "2.0.1",
         "@symfony/ux-chartjs": "file:vendor/symfony/ux-chartjs/Resources/assets",
         "@symfony/webpack-encore": "^1.0.0",
-        "bootstrap": "^5.3.2",
+        "bootstrap": "5",
         "core-js": "^3.0.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
