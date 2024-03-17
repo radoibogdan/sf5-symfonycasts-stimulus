@@ -123,9 +123,21 @@ yarn add jquery --dev
 php bin/console make:crud
 ```
 
+## 11) Install stimulus-autocomplete
+[Yarn][6] [Github][7]  
+Other 3rd party controllers: [Stimulus-components][8]  
+Other resources : [Better Stimulus][9]
+
+```
+yarn add stimulus-autocomplete
+```
 ----------------------------------------------------------------------
 [1]:https://github.com/stimulus-use/stimulus-use
 [2]:https://stimulus-use.github.io/stimulus-use/#/
 [3]:https://sweetalert2.github.io/
 [4]:https://github.com/symfony/ux-chartjs
 [5]:https://symfony.com/bundles/ux-chartjs/current/index.html
+[6]:https://yarnpkg.com/package?q=stimulus%20aut&name=stimulus-autocomplete
+[7]:https://github.com/afcapel/stimulus-autocomplete
+[8]:https://www.stimulus-components.com/docs
+[9]:https://www.betterstimulus.com/

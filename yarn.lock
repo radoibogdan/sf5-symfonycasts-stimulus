@@ -4391,6 +4391,13 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
+stimulus-autocomplete@2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/stimulus-autocomplete/-/stimulus-autocomplete-2.0.2.tgz#ded9f8481515222e707e8ad2ec094259f94d1895"
+  integrity sha512-nX9LHOqbZdRmnQm6ZMSdU9g0Fij2kdWM8mSwdatKdQl+gP82TQ0EwuB70qG7wdVLA2YkIXhGoAH9RbIR/KyY6Q==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 stimulus-use@0.41.0:
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.41.0.tgz#afe2559281ebe0504b1d35eb0e8e77df9ebd6fb6"
