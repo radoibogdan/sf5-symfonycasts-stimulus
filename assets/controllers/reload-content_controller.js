@@ -7,9 +7,13 @@ export default class extends Controller {
     }
 
     async refreshContent(event) {
-        this.contentTarget.style.opacity = 0.5;
+        const target = this.hasContentTarget ? this.contentTarget : this.element;
+        /* Makes table disappear with a little animation */
+        target.style.opacity = 0.5;
+        /* Replaces whole tables with new updated table list */
         const response = await fetch(this.urlValue);
-        this.contentTarget.innerHTML = await response.text();
-        this.contentTarget.style.opacity = 1;
+        target.innerHTML = await response.text();
+        /* Reapplies original opacity */
+        target.style.opacity = 1;
     }
 }

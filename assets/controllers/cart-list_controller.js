@@ -1,5 +1,8 @@
 import {Controller} from "@hotwired/stimulus";
 
+/**
+ * UNUSED Controller, replaced with reload-content_controller
+ */
 export default class extends Controller {
     static values = {
         shoppingCartUrl: String
