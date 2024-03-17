@@ -1,5 +1,5 @@
 import {Controller} from "@hotwired/stimulus";
-import { useClickOutside, useDebounce } from 'stimulus-use'
+import {useClickOutside, useDebounce, useTransition} from 'stimulus-use'
 
 /**
  * Search bar
@@ -20,6 +20,16 @@ export default class extends Controller {
     connect() {
         useClickOutside(this); /* When clicking outside the element of the controller => clickOutside() is called */
         useDebounce(this);
+        useTransition(this, {
+            element     : this.resultTarget, /* element to transition */
+            enterActive : 'fade-enter-active', /* These are css classes in app.css */
+            enterFrom   : 'fade-enter-from',
+            enterTo     : 'fade-enter-to',
+            leaveActive : 'fade-leave-active',
+            leaveFrom   : 'fade-leave-from',
+            leaveTo     : 'fade-leave-to',
+            hiddenClass : 'd-none' /* initial css class for the element */
+        })
     }
 
     onSearchInput(event) {
@@ -35,9 +45,11 @@ export default class extends Controller {
         })
         const response = await fetch(`${this.urlValue}?${params.toString()}`)
         this.resultTarget.innerHTML = await response.text();
+        this.enter(); /*css transition*/
     }
 
     clickOutside() {
-        this.resultTarget.innerHTML = '';
+        // this.resultTarget.innerHTML = '';
+        this.leave();
     }
 }
