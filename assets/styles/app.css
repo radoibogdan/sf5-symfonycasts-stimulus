@@ -146,3 +146,8 @@ h1 {
 .sidebar .nav-link.active .feather {
     color: inherit;
 }
+
+/* To avoid having multiple buttons from FORM and from the modals footer we hide all buttons inside the modals body */
+.modal-body button {
+    display: none;
+}

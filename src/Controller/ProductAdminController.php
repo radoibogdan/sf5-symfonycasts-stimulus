@@ -18,9 +18,10 @@ class ProductAdminController extends AbstractController
     /**
      * @Route("/", name="product_admin_index", methods={"GET"})
      */
-    public function index(ProductRepository $productRepository): Response
+    public function index(Request $request, ProductRepository $productRepository): Response
     {
-        return $this->render('product_admin/index.html.twig', [
+        $template = $request->query->get('isAjaxCall') ? '_list_table.html.twig' : 'index.html.twig';
+        return $this->render('product_admin/' . $template, [
             /*order by products, last product on top */
             'products' => $productRepository->findBy([], ['id' => 'DESC']),
         ]);
@@ -40,13 +41,28 @@ class ProductAdminController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
+            if ($request->isXmlHttpRequest()) {
+                return new Response(null, Response::HTTP_NO_CONTENT);
+            }
+
             return $this->redirectToRoute('product_admin_index');
         }
 
-        return $this->render('product_admin/new.html.twig', [
+        /**
+         * If it is an ajax request => return only form body
+         * Only works with jquery ajax call
+         * To use fetch see modal-form_controller.js + if ($request->get('isAjaxCall')) { TO DO }
+         */
+        $template = $request->isXmlHttpRequest() ? '_form.html.twig' : 'new.html.twig';
+
+        return $this->render('product_admin/' . $template, [
             'product' => $product,
             'form' => $form->createView(),
-        ]);
+        ], new Response(
+            null,
+            /*$form->isSubmitted() and not isValid() => the form has errors, will trigger the try/catch in modal-form_controller.js->submitForm() */
+            $form->isSubmitted() ? Response::HTTP_UNPROCESSABLE_ENTITY : Response::HTTP_OK)
+        );
     }
 
     /**

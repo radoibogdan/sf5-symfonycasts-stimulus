@@ -115,10 +115,11 @@ Go to http://127.0.0.1:8888/
 
 ## 10) Create CRUD for Product
 url : https://127.0.0.1:8000/admin/product/  
-Install bootstrap5 + create CRUD via maker
+Install bootstrap5, popperjs, jquery + create CRUD via maker
 ```
 yarn add bootstrap@5 --dev
 yarn add @popperjs/core --dev
+yarn add jquery --dev
 php bin/console make:crud
 ```
 
