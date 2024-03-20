@@ -36,8 +36,8 @@
                     <div class="col-9">
                         <form>
                             <div
-                                {{ stimulus_controller('search-preview', {
-                                    url: path('app_homepage')
+                                {{ stimulus_controller('autocomplete', {
+                                    url: path('app_homepage' , {'preview': 1})
                                 }) }}
                                 class="input-group"
                             >
@@ -47,11 +47,13 @@
                                     placeholder="Search products..."
                                     type="search"
                                     class="form-control"
-                                    data-action="search-preview#onSearchInput"
+{#                                    data-action="search-preview#onSearchInput"#}
+                                    data-autocomplete-target="input"
                                 >
                                 <div
                                     class="search-preview"
-                                    data-search-preview-target="result"
+{#                                    data-search-preview-target="result"#}
+                                    data-autocomplete-target="results"
                                 ></div>
                             </div>
                         </form>

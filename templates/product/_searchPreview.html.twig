@@ -3,6 +3,7 @@
         <a
             class="list-group-item list-group-item-action"
             href="{{ path('app_product', {id: product.id}) }}"
+            role="option"
         >
             <div class="d-flex align-items-center justify-content-between">
                 <div>
@@ -17,7 +18,7 @@
             </div>
         </a>
     {% else %}
-        <div class="list-group-item">
+        <div class="list-group-item" role="option">
             No results found!
         </div>
     {% endfor %}
