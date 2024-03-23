@@ -2,6 +2,7 @@ import {Controller} from "@hotwired/stimulus";
 import {useClickOutside, useDebounce, useTransition} from 'stimulus-use'
 
 /**
+ *********************  NOT USED ANYMORE bcos we installed stimulus-autocomplte 3rd party controller ******************
  * Search bar
  * templates/product/index.html.twig
  * When looking up a word => a list of options is displayed under the search input

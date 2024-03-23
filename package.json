@@ -12,7 +12,7 @@
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "regenerator-runtime": "^0.13.2",
-        "stimulus-autocomplete": "2",
+        "stimulus-autocomplete": "https://github.com/weaverryan/stimulus-autocomplete#toggle-event-always-dist",
         "webpack-bundle-analyzer": "^4.4.0",
         "webpack-notifier": "^1.6.0"
     },
